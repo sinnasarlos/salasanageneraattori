@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
+    <title>Generate passwords</title>
+    <link rel="stylesheet" href="pw_generator.css">
+</head>
+
+<body>
+    <div class="pw_container">
+    <div class="pw_header">
+    <div class="pw">
+    <span id="pw"> Here's your password </span>
+    <button id="copy">Copy to clipboard</button>
+    </div>
+    </div>
+    <div class="pw_body">
+    <div class="form_control">
+    <label for="length">How many characters?</label>
+    <input id="len" value="8" type="number" min="8" max="30" class="length">
+    </div>
+    <div class="form_control">
+    <label for="uppercase">Does it contain uppercase letters?</label>
+    <input id="uppercase" type="checkbox" class="checkbox">
+    </div>
+    <div class="form_control">
+    <label for="lowercase">Does it contain lowercase letters?</label>
+    <input id="lower" type="checkbox" class="checkbox">
+    </div>
+    <div class="form_control">
+        <label for="numbers">Does it contain numbers?</label>
+        <input id="numbers" type="checkbox" class="checkbox">
+    </div>
+    <div class="symbols">
+        <label for="symbols">Does it contain symbols?</label>
+        <input id="symbols" type="checkbox" class="checkbox">
+    </div>
+    <button class="create" id="create">Create a password</button>
+    </div>
+    </div>
+    <script defer src="pw_generator.js"></script>
+</body>
+</html>

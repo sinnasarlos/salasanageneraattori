@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    color: rgb(68, 104, 143);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+}
+.pw_container{
+    width: 500px;
+    background-color: rgb(115, 137, 199);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 6);
+}
+.pw_header{
+    padding: 1rem;
+}
+.pw{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(32, 82, 151);
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+.pw_button{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transform: translate(0, 50%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    background-color: antiquewhite;
+    padding: 0.25rem 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    color: rgb(15, 36, 50);
+    border: none;
+    cursor: pointer;
+}
+.pw:hover button{
+    opacity: 1;
+    transform: translate(0, 10%);
+}
+.pw_body{
+    padding: 0 1rem 1rem;
+}
+.form_control{
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.75rem 0;
+}
+.checkbox{
+    -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #0f62c8;
+	box-shadow: 0 1px 2px rgba(2, 5, 16, 0.05), inset 0px -15px 10px -12px rgba(5, 43, 93, 0.05);
+	padding: 9px;
+	border-radius: 3px;
+	position: relative;
+    float: right;
+}
+.checkbox:checked {
+	background-color: #000000;
+	border: 1px solid #041d3c;
+	box-shadow: 0 1px 2px rgba(2,5,16,0.05), inset 0px -15px 10px -12px rgba(5,43,93,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.checkbox:checked:after {
+	content: '\2714';
+	font-size: relative-size;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: antiquewhite;
+}
+.create{
+    display: block;
+    background-color: rgb(115, 137, 199);
+    color: rgb(32, 82, 151);
+    font-weight: bold;
+    margin-top: 1rem;
+    border: 1rem rgb(32, 82, 151);
+    width: 100%;
+    cursor: pointer;
+}
