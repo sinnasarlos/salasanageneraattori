@@ -1,4 +1,10 @@
-const passwordElement = document.getElementById("pw");
+const handleRequest = async (request) => {
+    return await serveFile(request, "pw_generator.html");
+  };
+
+serve(handleRequest, { port: 7777 });
+
+if (typeof document !== 'undefined') {const passwordElement = document.getElementById("pw");
 const copyElement = document.getElementById("copy");
 const lengthElement = document.getElementById("len");
 const upperElement = document.getElementById("uppercase");
@@ -6,10 +12,11 @@ const lowerElement = document.getElementById("lowercase");
 const symbolsElement = document.getElementById("symbols");
 const numbersElement = document.getElementById("numbers");
 const creatorElement = document.getElementById("generate");
-const upperLetters = ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ;
-const lowerLetters = abcdefghijklmnopqrstuvwxyzåäö;
+const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ";
+const lowerLetters = "abcdefghijklmnopqrstuvwxyzåäö";
 const numbers = "0123456789";
 const symbols = ".,!?#€%&/()=*+-";
+
 
 function getLowercase() {
     return lowerLetters[Math.floor(Math.random()*lowerLetters.length)];
@@ -67,4 +74,4 @@ copyElement.addEventListener("click", ()=>{
     document.execCommand("copy");
     textarea.remove();
     alert("Password copied to clipboard");
-})
+})}
